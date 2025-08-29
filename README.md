@@ -17,7 +17,7 @@ The system leverages **OpenCV**, **camera calibration**, and **ArUco marker dete
 
 ##  Repository Structure
 
-<img width="656" height="412" alt="Screenshot 2025-08-29 221911" src="https://github.com/user-attachments/assets/6d0a49a0-af6d-408e-be04-30f50e6928c0" />
+<img width="802" height="446" alt="image" src="https://github.com/user-attachments/assets/2bd53e73-f529-45ad-9539-119d82802d46" />
 
 ---
 
