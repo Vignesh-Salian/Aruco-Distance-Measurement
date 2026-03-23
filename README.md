@@ -105,7 +105,7 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 </a>
 <br>
 <a href="https://github.com/salianvignesh05-droid">
-  <img src="https://img.shields.io/github/followers/salianvignesh05-droid?label=Follow&style=social" alt="GitHub followers">
+  <img src="https://img.shields.io/github/followers/Vignesh-Salian?label=Follow&style=social" alt="GitHub Followers"/>
 </a>
 
 
