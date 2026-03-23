@@ -21,6 +21,14 @@ This project provides an accurate, non-invasive method for distance estimation. 
 
 ---
 
+## 📂 Repository Structure
+
+<div align="center">
+  <img width="802" height="446" alt="Repository Structure" src="https://github.com/user-attachments/assets/2bd53e73-f529-45ad-9539-119d82802d46" />
+</div>
+
+---
+
 ## 🚀 Installation & Setup
 
 ### 1. Clone the Repository
@@ -58,7 +66,7 @@ The project is broken down into three simple steps:
 
 ### 1. System Architecture
 Our pipeline processes the live feed, detects the markers, applies camera calibration math, and outputs the final distance.
-![System Architecture](https://github.com/user-attachments/assets/2bd53e73-f529-45ad-9539-119d82802d46)
+![System Architecture](results/system_architecture.png)
 
 ### 2. Camera Calibration
 ![Chessboard Calibration](results/chessboard_calibration.png)
@@ -88,6 +96,7 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
 </div>
+
 
 
 
