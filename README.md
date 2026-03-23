@@ -21,6 +21,14 @@ This project provides an accurate, non-invasive method for distance estimation. 
 
 ---
 
+## 💻 Technologies Used
+
+- **Language:** [![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+- **Core Library:** [![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)](https://opencv.org/)
+- **Numerical Computation:** [![NumPy](https://img.shields.io/badge/Numpy-777BB4?style=flat-square&logo=numpy&logoColor=white)](https://numpy.org/)
+
+---
+
 ## 📂 Repository Structure
 
 <div align="center">
@@ -64,18 +72,24 @@ The project is broken down into three simple steps:
 
 ## 📊 Results & Outputs
 
-### 1. System Architecture
-Our pipeline processes the live feed, detects the markers, applies camera calibration math, and outputs the final distance.
-![System Architecture](results/system_architecture.png)
-
-### 2. Camera Calibration
-![Chessboard Calibration](results/chessboard_calibration.png)
-
-### 3. ArUco Markers
-![ArUco Markers](results/aruco_markers.png)
-
-### 4. Real-time Measurement
-![Real-time Demo](results/real_time_demo.png)
+<table>
+  <tr>
+    <td align="center"><b>1. System Architecture</b><br>Pipeline for live feed processing and distance calculation.</td>
+    <td align="center"><b>2. Camera Calibration</b><br>Using chessboard pattern for intrinsic parameters.</td>
+  </tr>
+  <tr>
+    <td><img src="results/system_architecture.png" alt="System Architecture" width="400"/></td>
+    <td><img src="results/chessboard_calibration.png" alt="Chessboard Calibration" width="400"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>3. ArUco Markers</b><br>Custom detection for IDs 23, 24, 25.</td>
+    <td align="center"><b>4. Real-time Measurement</b><br>Live overlay of physical distance vector.</td>
+  </tr>
+  <tr>
+    <td><img src="results/aruco_markers.png" alt="ArUco Markers" width="400"/></td>
+    <td><img src="results/real_time_demo.png" alt="Real-time Demo" width="400"/></td>
+  </tr>
+</table>
 
 ---
 
@@ -84,18 +98,15 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 
 ---
 
-## 👨‍💻 Author
+## 🧑‍💻 Author
 
-<div align="center">
-  <h3>Vignesh N Salian</h3>
-  <p>📍 Udupi, Karnataka, India</p>
-  <a href="https://github.com/salianvignesh05-droid">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
-  </a>
-  <a href="https://www.linkedin.com/in/vignesh-n-salian">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-</div>
+<a href="https://github.com/salianvignesh05-droid">
+  <img src="https://img.shields.io/badge/VIGNESH%20SALIAN-DEVELOPER-0084c8?style=for-the-badge&logo=github&labelColor=555555" alt="Vignesh Salian GitHub">
+</a>
+<br>
+<a href="https://github.com/salianvignesh05-droid">
+  <img src="https://img.shields.io/github/followers/salianvignesh05-droid?label=Follow&style=social" alt="GitHub followers">
+</a>
 
 
 
