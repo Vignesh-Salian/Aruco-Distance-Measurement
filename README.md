@@ -1,107 +1,78 @@
-# 📏 ArUco Spatial Tracker: Precision Distance Measurement
+# 📏 ArUco Distance Measurement
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green.svg?logo=opencv)](https://opencv.org/)
 [![Python](https://img.shields.io/badge/Python-3.x-blue.svg?logo=python)](https://www.python.org/)
 
-> **A real-time computer vision pipeline for Euclidean distance estimation between anthropometric landmarks using ArUco fiducial markers.**
+> **A real-time computer vision system for measuring the distance between ArUco markers placed on the nose and jaw regions.**
 
-This system bridges the gap between 2D pixel space and 3D physical reality. By leveraging camera calibration and Perspective-n-Point (PnP) pose estimation, it performs non-invasive, sub-millimeter accurate distance calculations—specifically optimized for diagnostic use-cases like measuring inter-segmental shifts in the nose and jaw regions.
-
----
-
-## ✨ System Highlights
-
-- **Intrinsic Calibration Engine:** Mitigates radial and tangential lens distortion utilizing Zhang's Method via Chessboard grid analysis.
-- **Robust Fiducial Tracking:** Real-time localization and decoding of specific ArUco markers (Target IDs: 23, 24, 25), optimized for stability under varying ambient lighting.
-- **Dynamic 3D Visualization:** Real-time projection of coordinate axes ($R^3$ space) and physical distance vectors ($d = \sqrt{\Delta x^2 + \Delta y^2 + \Delta z^2}$).
-- **Data Analytics:** Automated temporal distance logging, with results systematically stored as processed images and graphs.
+This project provides an accurate, non-invasive method for distance estimation. By leveraging **OpenCV**, **camera calibration**, and **ArUco marker detection**, it securely bridges the gap between 2D camera pixels and real-world 3D measurements. It is specifically designed to support **dental and orthodontic diagnostics**.
 
 ---
 
-## 🏗 Architecture & Workflow
+## ✨ Key Features
 
-The pipeline is modularized into three optimization phases to ensure maximum reproducibility:
-
-1. **Geometric Calibration Phase:** Corrects optical aberrations and establishes the foundational focal length.
-2. **Generative Synthesis:** Scripted generation of high-contrast, edge-defined markers.
-3. **Inference Engine:** Low-latency frame processing, sub-pixel corner refinement, and spatial calculation.
-
-<div align="center">
-  <img width="802" alt="System Architecture Diagram" src="https://github.com/user-attachments/assets/2bd53e73-f529-45ad-9539-119d82802d46" />
-</div>
+- **Automated Camera Calibration:** Uses chessboard images to correct camera lens distortion for highly accurate measurements.
+- **Custom Marker Generation:** Easily generate specific ArUco markers (IDs 23, 24, 25) for physical placement.
+- **Real-Time Detection:** Live tracking of ArUco markers directly from a standard camera feed.
+- **Precision Distance Calculation:** Automatically computes the real-world distance (in millimeters) between the nose and jaw markers.
+- **Dynamic Visualization:** Displays a live, annotated overlay of the distance directly on the video stream.
+- **Data Export:** Automatically saves the results as processed images and graphs for easy review.
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Installation & Setup
 
-### Prerequisites
-Ensure a Python environment is configured with the necessary numerical and vision dependencies.
-
+### 1. Clone the Repository
+Ensure you have Python installed, then setup the project:
 ```bash
-# Clone the repository
 git clone https://github.com/salianvignesh05-droid/Aruco-Distance-Measurement.git
 cd Aruco-Distance-Measurement
+```
 
-# Install dependencies
+### 2. Install Dependencies
+```bash
 pip install -r requirements.txt
 ```
 
-### Execution Pipeline
+### 3. Run the System
 
-**Phase I: Camera Calibration**
-> Derive the camera's intrinsic parameters through grid analysis.
-```bash
-python calibration.py
-```
+The project is broken down into three simple steps:
 
-**Phase II: Fiducial Generation**
-> Generate the specified ArUco markers for the physical anchor points.
-```bash
-python generate_aruco.py
-```
-
-**Phase III: Real-Time Inference**
-> Execute the primary visual tracking and distance calculation loop.
-```bash
-python distance_calculation.py
-```
+- **Step 1: Calibrate the Camera** (Required for accuracy)
+  ```bash
+  python calibration.py
+  ```
+- **Step 2: Generate ArUco Markers** (To print and use)
+  ```bash
+  python generate_aruco.py
+  ```
+- **Step 3: Run Distance Measurement** (Live detection)
+  ```bash
+  python distance_calculation.py
+  ```
 
 ---
 
-## 📊 Evaluation & Results
+## 📊 Results & Outputs
 
-<table>
-  <tr>
-    <td align="center"><b>Calibration Precision</b><br>Robust calibration with low re-projection error.</td>
-    <td align="center"><b>Marker Localization</b><br>Stable corner subsets with high confidence scores.</td>
-  </tr>
-  <tr>
-    <td><img src="results/chessboard_calibration.png" alt="Chessboard Calibration" width="400"/></td>
-    <td><img src="results/aruco_markers.png" alt="ArUco Markers" width="400"/></td>
-  </tr>
-  <tr>
-    <td align="center" colspan="2"><b>Real-time Vector Analysis</b><br>Translational distance plotted simultaneously on the video stream.</td>
-  </tr>
-  <tr>
-    <td align="center" colspan="2"><img src="results/real_time_demo.png" alt="Real-time Demo" width="600"/></td>
-  </tr>
-</table>
+### 1. System Architecture
+Our pipeline processes the live feed, detects the markers, applies camera calibration math, and outputs the final distance.
+![System Architecture](https://github.com/user-attachments/assets/2bd53e73-f529-45ad-9539-119d82802d46)
 
----
+### 2. Camera Calibration
+![Chessboard Calibration](results/chessboard_calibration.png)
 
-## 🔍 Theoretical Methodology
+### 3. ArUco Markers
+![ArUco Markers](results/aruco_markers.png)
 
-The physical distance calculation relies on resolving perspective projection. For two markers $M_1$ and $M_2$:
-1. **Corner Detection:** Isolate 2D image coordinates $\{c_{i,1}, c_{i,2}, c_{i,3}, c_{i,4}\}$ for both markers.
-2. **Pose Estimation (PnP):** Compute the rotation vector ($rvec$) and translation vector ($tvec$) relative to the camera center.
-3. **Transformation:** Map local marker coordinate systems into a unified world coordinate standard.
-4. **Euclidean Metric:** Calculates the $L_2$ norm representing the absolute 3D physical distance across space between the centroids of $M_1$ and $M_2$.
+### 4. Real-time Measurement
+![Real-time Demo](results/real_time_demo.png)
 
 ---
 
 ## 📜 License
-Distibuted under the **MIT License**. See `LICENSE` for more detailed specifications.
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -117,6 +88,8 @@ Distibuted under the **MIT License**. See `LICENSE` for more detailed specificat
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
 </div>
+
+
 
 
 
