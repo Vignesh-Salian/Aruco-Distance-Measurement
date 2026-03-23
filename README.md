@@ -21,14 +21,6 @@ This project provides an accurate, non-invasive method for distance estimation. 
 
 ---
 
-## 💻 Technologies Used
-
-- **Language:** [![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-- **Core Library:** [![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)](https://opencv.org/)
-- **Numerical Computation:** [![NumPy](https://img.shields.io/badge/Numpy-777BB4?style=flat-square&logo=numpy&logoColor=white)](https://numpy.org/)
-
----
-
 ## 📂 Repository Structure
 
 <div align="center">
@@ -108,6 +100,16 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
   <img src="https://img.shields.io/github/followers/Vignesh-Salian?label=Follow&style=social" alt="GitHub Followers"/>
 </a>
 
+---
+
+## 💻 Technologies Used
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" />
+  <img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
+  <img src="https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=matplotlib&logoColor=white" alt="Matplotlib" />
+</div>
 
 
 
